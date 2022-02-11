@@ -18,16 +18,11 @@ countTheBits( 65535 )  //=> 16
 // Your solution for 27-countTheBits here:
 
 const countTheBits = (num) => {
-  if (num === 0) return num;
   let bits = (num >>> 0).toString(2);
   let ctr = 0;
   [...bits].forEach((bit) => {
-    if (parseInt(bit) === 1) {
-      ctr++;
-    }
-    console.log(bit)
+    if (parseInt(bit) === 1) ctr++;
   });
-  console.log("counter", ctr);
   return ctr;
 };
 
